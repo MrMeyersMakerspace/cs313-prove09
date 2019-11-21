@@ -7,7 +7,10 @@ app.set("views", "views");
 app.set("view engine", "ejs");
 
 app.get("/", function (request, response) {
-    response.sendFile('package.html');
+    console.log("Received a request for /");
+
+    response.write("This is the root");
+    response.end();
 });
 
 app.get("/getRate", calculateRate);
