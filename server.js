@@ -104,4 +104,6 @@ function calculateRate(request, response) {
     response.render("getRate", param);
 }
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`));
+app.listen(5000, function () {
+    console.log("The server is up and listening on port 5000")
+});
