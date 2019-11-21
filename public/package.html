@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Postage Calculator</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body>
+    <p>Please enter the weight of the item and select the mail type to receive the postage price.</p>
+    <form method="get" id="postageForm" name="postageForm" action="/getRate">
+        <label for="weight">Enter Weight in Ounces</label>
+        <input type="number" step=0.001 id="weight" name="weight" required/><br />
+        <label for="packageType">Pick what type of package:</label>
+        <select id="packageType" name="packageType">
+            <option value="stamped letter">Stamped Letters</option>
+            <option value="metered letter">Metered Letters</option>
+            <option value="large envelope">Large Envelopes</option>
+            <option value="first-class package">First-Class Package</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
