@@ -6,12 +6,7 @@ app.use(express.static("public"));
 app.set("views", "views");
 app.set("view engine", "ejs");
 
-app.get("/", function (request, response) {
-    console.log("Received a request for /");
-
-    response.write("This is the root");
-    response.end();
-});
+app.get("/", (request, response) => response.render('package'));
 
 app.get("/getRate", calculateRate);
 
